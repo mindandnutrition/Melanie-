@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Melanie D'Souza | Clinical Dietitian Dubai & India | PCOS, Gut Health & Hormone Specialist</title>
+    <meta name="description" content="Clinical Dietitian with 10 years hospital experience specializing in gut health, PCOS, thyroid, and hormonal imbalances. GUT CODE program in Dubai & India. Book free discovery call.">
+    <meta name="keywords" content="clinical dietitian Dubai, nutritionist India, PCOS treatment Dubai, gut health specialist, thyroid dietitian, hormonal imbalance nutrition, IBS treatment, bloating solutions, Dubai nutritionist, India dietitian">
+    <meta name="author" content="Melanie D'Souza">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Melanie D'Souza | Clinical Dietitian | Gut Health & Hormones">
+    <meta property="og:description" content="Nourish your gut based on your microbial signature, not diet trends. 10 years hospital experience.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="melanie-photo.jpg">
+    
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dietitian",
+      "name": "Melanie D'Souza",
+      "description": "Clinical Dietitian specializing in gut health and hormones",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dubai",
+        "addressCountry": "AE"
+      },
+      "areaServed": ["Dubai", "India"],
+      "priceRange": "$$",
+      "url": "https://melaniedsouza.com",
+      "telephone": "+971-XXX-XXXX",
+      "email": "mindandnutrtion1@gmail.com",
+      "sameAs": [
+        "https://instagram.com/mindandnutrition"
+      ]
+    }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes floatSlow {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -1000px 0;
+            }
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+
+        /* Apply animations to sections */
+        .hero {
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero h1 {
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero .subtitle {
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .hero .tagline {
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+
+        .hero .credentials {
+            animation: fadeInUp 0.8s ease-out 0.8s both;
+        }
+
+        .hero .cta-button {
+            animation: fadeInUp 0.8s ease-out 1s both;
+        }
+
+        .section-title {
+            animation: fadeInUp 0.8s ease-out both;
+        }
+
+        .section-subtitle {
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .program-card,
+        .testimonial-card,
+        .faq-item,
+        .checklist-item {
+            animation: fadeInUp 0.6s ease-out both;
+        }
+
+        .program-card:nth-child(2),
+        .testimonial-card:nth-child(2),
+        .faq-item:nth-child(even) {
+            animation-delay: 0.2s;
+        }
+
+        .testimonial-card:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .about-image img {
+            animation: slideInLeft 0.8s ease-out both;
+        }
+
+        .about-text {
+            animation: slideInRight 0.8s ease-out 0.2s both;
+        }
+
+        .checklist-container {
+            animation: scaleIn 0.8s ease-out both;
+        }
+
+        /* Hover animations enhancement */
+        .program-card,
+        .testimonial-card,
+        .service-card,
+        .faq-item {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .cta-button {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.2),
+                transparent
+            );
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        /* Floating effect for WhatsApp button */
+        .whatsapp-float {
+            animation: floatSlow 3s ease-in-out infinite;
+        }
+
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Profile picture in header */
+        .header-profile {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .header-profile-pic {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--sage);
+            box-shadow: 0 2px 8px rgba(228, 230, 163, 0.3);
+            transition: all 0.3s;
+        }
+
+        .header-profile-pic:hover {
+            transform: scale(1.1);
+            border-color: var(--warm-orange);
+            box-shadow: 0 4px 12px rgba(240, 156, 35, 0.4);
+        }
+
+        :root {
+            --charcoal: #4c4d4f;
+            --sage: #e4e6a3;
+            --warm-orange: #f09c23;
+            --black: #101010;
+            --white: #ffffff;
+            --light-bg: #fafaf9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.9);
+            background-color: var(--black);
+            font-weight: 400;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(16, 16, 16, 0.95);
+            padding: 25px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            animation: slideInLeft 0.8s ease-out both;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--white);
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-profile-pic {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--sage);
+            box-shadow: 0 2px 8px rgba(228, 230, 163, 0.3);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .nav-profile-pic:hover {
+            transform: scale(1.1) rotate(5deg);
+            border-color: var(--warm-orange);
+            box-shadow: 0 4px 12px rgba(240, 156, 35, 0.4);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+            flex-wrap: wrap;
+            animation: slideInRight 0.8s ease-out 0.2s both;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s;
+            letter-spacing: 0.3px;
+        }
+
+        .nav-links a:hover {
+            color: var(--warm-orange);
+            text-shadow: 0 0 8px rgba(228, 230, 163, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to bottom, var(--black) 0%, rgba(16, 16, 16, 0.98) 100%);
+            padding: 120px 0 100px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            color: var(--white);
+            margin-bottom: 20px;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -1px;
+            line-height: 1.1;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 25px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .hero .tagline {
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 680px;
+            margin: 0 auto 35px;
+            line-height: 1.8;
+            font-weight: 400;
+        }
+
+        .hero .credentials {
+            font-size: 1rem;
+            color: var(--warm-orange);
+            margin-bottom: 45px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--warm-orange);
+            color: var(--white);
+            padding: 16px 40px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            margin: 8px;
+            letter-spacing: 0.3px;
+        }
+
+        .cta-button:hover {
+            background-color: #d88820;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(240, 156, 35, 0.3);
+        }
+
+        .cta-button.secondary {
+            background-color: transparent;
+            color: var(--charcoal);
+            border: 2px solid var(--charcoal);
+        }
+
+        .cta-button.secondary:hover {
+            background-color: var(--charcoal);
+            color: var(--white);
+            border-color: var(--sage);
+            box-shadow: 0 0 15px rgba(228, 230, 163, 0.3);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3.2rem;
+            color: var(--white);
+            margin-bottom: 20px;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -1px;
+            line-height: 1.2;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--sage);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.75);
+            margin-bottom: 60px;
+            max-width: 680px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+            line-height: 1.7;
+        }
+
+        /* Gut Checklist Section */
+        .gut-checklist {
+            background-color: rgba(228, 230, 163, 0.05);
+            position: relative;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .checklist-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 60px;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .checklist-title {
+            text-align: center;
+            font-size: 2.8rem;
+            color: var(--white);
+            margin-bottom: 30px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .checklist-intro {
+            text-align: center;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 45px;
+            font-weight: 500;
+        }
+
+        .checklist-items {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .checklist-item {
+            background-color: rgba(255, 255, 255, 0.03);
+            padding: 22px 25px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .checklist-item:hover {
+            border-color: var(--sage);
+            background-color: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 2px 8px rgba(228, 230, 163, 0.2);
+        }
+
+        .checklist-item input[type="checkbox"] {
+            width: 24px;
+            height: 24px;
+            margin-right: 18px;
+            cursor: pointer;
+            accent-color: var(--warm-orange);
+        }
+
+        .checklist-cta {
+            background-color: rgba(240, 156, 35, 0.1);
+            color: var(--white);
+            padding: 45px 40px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 45px;
+            border: 2px solid var(--warm-orange);
+        }
+
+        .checklist-cta h3 {
+            font-size: 1.8rem;
+            margin-bottom: 18px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.4;
+            color: var(--white);
+        }
+
+        .checklist-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .checklist-cta .cta-button {
+            background-color: var(--warm-orange);
+            color: var(--white);
+            font-size: 1.1rem;
+            padding: 18px 45px;
+        }
+
+        .checklist-cta .cta-button:hover {
+            background-color: #d88820;
+        }
+
+        /* About Section */
+        .about {
+            background-color: rgba(16, 16, 16, 0.5);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 550px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 12px 32px rgba(240, 156, 35, 0.2);
+            border: 2px solid var(--sage);
+            transition: all 0.3s;
+        }
+
+        .about-image img:hover {
+            box-shadow: 0 15px 40px rgba(228, 230, 163, 0.3);
+            border-color: var(--warm-orange);
+        }
+
+        .about-text h3 {
+            color: var(--white);
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.05rem;
+        }
+
+        .highlight-box {
+            background-color: rgba(228, 230, 163, 0.1);
+            padding: 35px;
+            border-left: 4px solid var(--warm-orange);
+            margin: 35px 0;
+            border-radius: 6px;
+        }
+
+        .highlight-box strong {
+            color: var(--warm-orange);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        /* GUT CODE Program */
+        .gut-code {
+            background-color: var(--black);
+        }
+
+        .program-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-top: 60px;
+        }
+
+        .program-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid var(--warm-orange);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .program-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 32px rgba(240, 156, 35, 0.3), 0 0 30px rgba(228, 230, 163, 0.1);
+            border-color: var(--warm-orange);
+        }
+
+        .program-card h3 {
+            color: var(--white);
+            font-size: 2.2rem;
+            margin-bottom: 18px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .program-card .phase-label {
+            display: inline-block;
+            background-color: rgba(228, 230, 163, 0.2);
+            color: var(--sage);
+            padding: 8px 18px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border: 1px solid var(--sage);
+        }
+
+        .program-card ul {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .program-card li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+        }
+
+        .program-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--warm-orange);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .price {
+            font-size: 2.8rem;
+            color: var(--warm-orange);
+            font-weight: 700;
+            margin: 25px 0;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 1.6rem;
+            margin-right: 12px;
+        }
+
+        .program-card .cta-button {
+            width: 100%;
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        /* Services */
+        .services {
+            background-color: rgba(16, 16, 16, 0.5);
+        }
+
+        .service-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 50px;
+            border-radius: 8px;
+            margin: 40px 0;
+            border-left: 4px solid var(--warm-orange);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .service-card h3 {
+            color: var(--white);
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .service-card p {
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 15px;
+        }
+
+        /* Not for You Section */
+        .not-for-you {
+            background-color: rgba(228, 230, 163, 0.05);
+            padding: 50px;
+            border-radius: 8px;
+            margin: 60px 0 40px 0;
+            border: 2px solid rgba(228, 230, 163, 0.2);
+            text-align: center;
+        }
+
+        .not-for-you h3 {
+            color: var(--sage);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            text-shadow: 0 0 20px rgba(228, 230, 163, 0.3);
+        }
+
+        .not-for-you p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        /* Calendly Integration */
+        .calendly-section {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .calendly-section h3 {
+            text-align: center;
+            color: var(--white);
+            margin-bottom: 25px;
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        /* FAQ Section */
+        .faq {
+            background-color: var(--black);
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 35px;
+            margin: 25px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            border-left: 4px solid rgba(228, 230, 163, 0.3);
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .faq-item:hover {
+            border-left-color: var(--sage);
+            box-shadow: 0 6px 16px rgba(228, 230, 163, 0.15);
+        }
+
+        .faq-question {
+            color: var(--white);
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 18px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(228, 230, 163, 0.1);
+        }
+
+        .faq-question:hover {
+            color: var(--warm-orange);
+        }
+
+        .faq-answer {
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .faq-answer ul {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+
+        .faq-answer li {
+            margin: 8px 0;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .faq-answer strong {
+            color: var(--warm-orange);
+            font-weight: 600;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background-color: rgba(16, 16, 16, 0.5);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-top: 60px;
+        }
+
+        .testimonial-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+            border-top: 3px solid rgba(228, 230, 163, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(240, 156, 35, 0.2);
+            border-top-color: var(--sage);
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .testimonial-author {
+            color: var(--warm-orange);
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        /* Email Signup */
+        .email-signup {
+            background-color: var(--black);
+            text-align: center;
+        }
+
+        .email-signup .section-title {
+            color: var(--white);
+        }
+
+        .email-signup .section-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .signup-form {
+            max-width: 500px;
+            margin: 50px auto;
+        }
+
+        .signup-form input {
+            width: 100%;
+            padding: 18px 25px;
+            margin-bottom: 18px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            font-size: 1.05rem;
+            font-family: 'Inter', sans-serif;
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--white);
+        }
+
+        .signup-form input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .signup-form input:focus {
+            outline: none;
+            border-color: var(--warm-orange);
+            background-color: rgba(255, 255, 255, 0.08);
+        }
+
+        .email-signup a {
+            color: var(--sage);
+            font-weight: 600;
+        }
+
+        .email-signup a:hover {
+            color: var(--warm-orange);
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: var(--white);
+            border-radius: 50%;
+            text-align: center;
+            font-size: 32px;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #20ba5a;
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(37, 211, 102, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--black);
+            color: rgba(255, 255, 255, 0.9);
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: var(--sage);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: var(--sage);
+            text-shadow: 0 0 10px rgba(228, 230, 163, 0.5);
+        }
+
+        .social-links {
+            margin: 25px 0;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 15px;
+            font-size: 1.4rem;
+            transition: transform 0.3s;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.15);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .section-title {
+                font-size: 2.4rem;
+            }
+
+            .about-content,
+            .program-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                gap: 20px;
+                font-size: 0.9rem;
+            }
+
+            .logo-section {
+                margin-bottom: 15px;
+            }
+
+            .nav-profile-pic {
+                width: 40px;
+                height: 40px;
+            }
+
+            .checklist-container,
+            .faq-container,
+            .service-card,
+            .calendly-section {
+                padding: 35px 25px;
+            }
+
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 55px;
+                height: 55px;
+                font-size: 28px;
+            }
+
+            .program-card,
+            .testimonial-card {
+                padding: 35px;
+            }
+
+            section {
+                padding: 70px 0;
+            }
+
+            /* Disable some animations on mobile for performance */
+            .program-card,
+            .testimonial-card,
+            .faq-item,
+            .about-image img,
+            .about-text {
+                animation: fadeIn 0.5s ease-out both;
+            }
+        }
+
+        /* Scroll reveal utility */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/918618204830" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+        &#x1F4AC;
+    </a>
+
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo-section">
+                <img src="melanie-photo.jpg" alt="Melanie D'Souza" class="nav-profile-pic">
+                <div class="logo">Melanie D'Souza</div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#gut-code">GUT CODE</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#subscribe">Subscribe</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Melanie D'Souza</h1>
+            <p class="subtitle">Clinical Dietitian | Dubai & India</p>
+            <p class="tagline">I help you nourish your gut based on your microbial signature, not diet trends.</p>
+            <p class="credentials">10+ Years of Hospital Experience | Gut Health & Hormones Specialist</p>
+            <a href="#gut-code" class="cta-button">Discover GUT CODE</a>
+            <a href="#services" class="cta-button secondary">Book Discovery Call</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Melanie</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="melanie-photo.jpg" alt="Melanie D'Souza - Clinical Dietitian specializing in gut health, PCOS, and hormones in Dubai and India">
+                </div>
+                <div class="about-text">
+                    <h3>A Decade of Clinical Excellence</h3>
+                    <p>With 10+ years of intensive hospital experience working alongside seasoned specialists and doctors across multiple departments—from gastroenterologists and endocrinologists to gynecologists—I've developed an unparalleled understanding of human physiology.</p>
+                    
+                    <p>This isn't textbook knowledge—it's real-world insight gained from collaborating with top medical professionals and working with thousands of patients dealing with complex conditions like PCOS, thyroid disorders, IBS, and hormonal imbalances.</p>
+                    
+                    <div class="highlight-box">
+                        <strong>My Unique Approach:</strong> I translate complex medical science into simple, sustainable habits and structures that actually work. No restrictive diets. No one-size-fits-all protocols. Just personalized nutrition based on YOUR gut's unique microbial signature.
+                    </div>
+                    
+                    <p><strong>Specializations:</strong></p>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li>✓ Gut Health & Microbiome Optimization</li>
+                        <li>✓ Hormonal Balance (PCOS, Thyroid, Perimenopause)</li>
+                        <li>✓ Digestive Disorders (IBS, Bloating, Food Sensitivities)</li>
+                        <li>✓ Sustainable Weight Management</li>
+                        <li>✓ Fatigue, Acne & Hair Health</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gut Checklist Section -->
+    <section class="gut-checklist">
+        <div class="container">
+            <div class="checklist-container">
+                <h2 class="checklist-title">The Gut Checklist</h2>
+                <p class="checklist-intro">How many of these do you feel daily?</p>
+                
+                <div class="checklist-items">
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span>Bloating after meals</span>
+                    </label>
+                    
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span>Brain fog or low mood</span>
+                    </label>
+                    
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span>Constipation / irregular stool</span>
+                    </label>
+                    
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span>Sugar or salt cravings</span>
+                    </label>
+                    
+                    <label class="checklist-item">
+                        <input type="checkbox">
+                        <span>Fatigue after lunch</span>
+                    </label>
+                </div>
+
+                <div class="checklist-cta">
+                    <h3>If you checked 2 or more, your gut is asking for a reset.</h3>
+                    <p>Join the 4-Week Gut Reset with Melanie<br>
+                    Rebuild your gut, balance your hormones, and feel your best again — inside and out.</p>
+                    <a href="#gut-code" class="cta-button">Discover the GUT CODE Program</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GUT CODE Program -->
+    <section id="gut-code" class="gut-code">
+        <div class="container">
+            <h2 class="section-title">The GUT CODE Program</h2>
+            <p class="section-subtitle">Your gut microbiome determines how your body digests food, manages inflammation, and affects your energy, hormones, and weight. It's time to decode yours.</p>
+            
+            <div class="program-grid">
+                <!-- Phase 1 -->
+                <div class="program-card">
+                    <span class="phase-label">Phase 1</span>
+                    <h3>4-Week Gut Reset</h3>
+                    <p><strong>Foundational Reset Protocol</strong></p>
+                    
+                    <ul>
+                        <li>Remove inflammatory triggers</li>
+                        <li>Reset and heal gut lining</li>
+                        <li>Balance your microbiome</li>
+                        <li>Reduce bloating & improve digestion</li>
+                        <li>Support healthy bowel movements</li>
+                        <li>Kickstart fat loss & tackle stubborn weight</li>
+                    </ul>
+                    
+                    <div class="price">
+                        <span class="original-price">AED 449</span>
+                        <span>AED 249</span>
+                    </div>
+                    <p style="font-size: 0.95rem; color: var(--warm-orange); font-weight: 600;">Limited Time Launch Offer</p>
+                    
+                    <a href="YOUR-GUMROAD-LINK-HERE" class="cta-button" target="_blank">Start Phase 1 Now</a>
+                    <p style="text-align: center; font-size: 0.9rem; margin-top: 12px; color: rgba(255, 255, 255, 0.6);">Digital, self-paced program</p>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="program-card">
+                    <span class="phase-label">Phase 2</span>
+                    <h3>Personalized Nourishment</h3>
+                    <p><strong>Customized with Melanie</strong></p>
+                    
+                    <ul>
+                        <li>One-on-one strategy session</li>
+                        <li>Personalized meal plans based on YOUR goals</li>
+                        <li>Targeted nutrition for your specific condition</li>
+                        <li>Ongoing support & adjustments</li>
+                        <li>Deep dive into your unique physiology</li>
+                        <li>Sustainable long-term results</li>
+                    </ul>
+                    
+                    <div class="price">
+                        Contact for Pricing
+                    </div>
+                    <p style="font-size: 0.95rem; color: rgba(255, 255, 255, 0.7);">Available after completing Phase 1</p>
+                    <p style="font-size: 1rem; margin-top: 18px; color: var(--white); font-weight: 600;">Start with a FREE 15-minute discovery call</p>
+                    
+                    <a href="#services" class="cta-button secondary">Book Discovery Call</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Work With Me</h2>
+            <p class="section-subtitle">Personalized nutrition guidance tailored to your unique needs and goals</p>
+            
+            <div class="not-for-you">
+                <h3>If GUT CODE is not for you...</h3>
+                <p>...then work with me directly.</p>
+            </div>
+            
+            <div class="service-card">
+                <h3>One-on-One Consultations</h3>
+                <p>Get personalized meal plans, meal prep strategies, and ongoing support designed specifically for your body, lifestyle, and health goals.</p>
+                
+                <p><strong>Perfect for:</strong></p>
+                <ul style="list-style: none; padding-left: 0; margin-top: 20px;">
+                    <li style="margin: 12px 0;">✓ Managing PCOS, thyroid issues, or hormonal imbalances</li>
+                    <li style="margin: 12px 0;">✓ Overcoming digestive issues (IBS, bloating, food sensitivities)</li>
+                    <li style="margin: 12px 0;">✓ Sustainable weight management</li>
+                    <li style="margin: 12px 0;">✓ Addressing fatigue, acne, or hair loss</li>
+                    <li style="margin: 12px 0;">✓ Building a personalized nutrition plan that fits YOUR life</li>
+                </ul>
+                
+                <p style="margin-top: 30px; font-size: 1.15rem; color: var(--warm-orange); font-weight: 600;">📞 Start with a FREE 15-minute discovery call</p>
+                <p style="font-size: 1rem; color: rgba(255, 255, 255, 0.8);">Let's discuss your goals and see if we're a good fit before you commit.</p>
+            </div>
+
+            <!-- Calendly Integration -->
+            <div class="calendly-section">
+                <h3>Book Your Free Discovery Call</h3>
+                <p style="text-align: center; margin-bottom: 35px; color: rgba(255, 255, 255, 0.8);">Choose a time that works for you:</p>
+                
+                <!-- Calendly inline widget begin -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/mindandnutrition1/15min" style="min-width:320px;height:630px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Calendly inline widget end -->
+                
+                <p style="text-align: center; margin-top: 25px; font-size: 0.9rem; color: rgba(255, 255, 255, 0.7);">
+                    Book your free 15-minute call to discuss your health goals.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Success Stories</h2>
+            <p class="section-subtitle">Real results from real people</p>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"After years of struggling with PCOS and bloating, Melanie's approach finally gave me answers. My energy is back and I've lost the stubborn weight I couldn't shift for years."</p>
+                    <p class="testimonial-author">— Jessica</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p>"Melanie doesn't just give you a diet plan—she helps you understand your body. My thyroid levels have stabilized and I finally feel like myself again."</p>
+                    <p class="testimonial-author">— Ayesha</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p>"The GUT CODE program changed everything for me. No more bloating, my skin cleared up, and I actually understand what my body needs now."</p>
+                    <p class="testimonial-author">— Dhivya</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Phase 1 Gut Reset — Your Questions Answered</p>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What if I have sugar cravings during this phase?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sugar cravings are common — it's your gut microbiome readjusting. Harmful bacteria and yeast (like Candida) thrive on sugar, so when you stop feeding them, they send out strong hunger signals. Here's how to manage it:</p>
+                        <ul>
+                            <li>Add protein and healthy fats to each meal (they stabilize blood sugar)</li>
+                            <li>Use cinnamon, fennel seeds, or mint tea post meals — they reduce sugar cravings naturally</li>
+                            <li>Have a mid-evening snack like coconut yogurt with chia or a handful of nuts</li>
+                            <li>Stay hydrated — dehydration often mimics sugar cravings</li>
+                        </ul>
+                        <p><strong>Why it matters:</strong> This phase is teaching your body to use fat for fuel and stabilize your blood sugar rhythm — the key to hormone and gut balance.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        I feel more tired or moody in the first few days — is that normal?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! This is often called the "die-off phase" — your body is detoxing from inflammatory foods, caffeine, and refined sugar. Support yourself with:</p>
+                        <ul>
+                            <li>Warm lemon water or cinnamon water</li>
+                            <li>Early bedtime (by 10:30 PM)</li>
+                            <li>Light movement, not intense workouts</li>
+                        </ul>
+                        <p><strong>Why it matters:</strong> As your gut flora rebalances, your energy levels will rise naturally by Week 2.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I have coffee or tea?
+                    </div>
+                    <div class="faq-answer">
+                        <p>In Phase 1, it's best to stick to coffee 1 cup or tea 2 cups before 3pm. You can replace the other cups with spearmint tea, blue pea tea or chamomile tea.</p>
+                        <p><strong>Why it matters:</strong> Caffeine can trigger cortisol spikes and affect gut healing — moderation helps restore your natural energy rhythm.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What about eating out or social events?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Plan ahead. Choose grilled, steamed, or baked dishes, and skip creamy sauces or sugary drinks.</p>
+                        <p><strong>Pro tip:</strong> If you have a meal that's off-plan, just go back to your next balanced plate — no guilt.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I use stevia or natural sweeteners?
+                    </div>
+                    <div class="faq-answer">
+                        <p>I would recommend monk fruit or a small drizzle of Manuka honey (1tsp) in Phase 1 and avoid sugar alcohols like xylitol in this phase — they can bloat sensitive guts.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Will I lose weight on this plan?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Possibly — many notice less bloating, reduced water retention, and fat loss due to lower inflammation.</p>
+                        <p><strong>However,</strong> the main goal here is gut repair and inflammation reset — fat loss is a positive side effect.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What if I feel constipated or bloated initially?
+                    </div>
+                    <div class="faq-answer">
+                        <p>That's your gut adjusting. Add:</p>
+                        <ul>
+                            <li>1 tbsp soaked chia or flax daily</li>
+                            <li>2–3L of water</li>
+                            <li>Herbal teas like peppermint, fennel, or triphala before bed</li>
+                        </ul>
+                        <p><strong>Why it matters:</strong> Supporting natural elimination helps your detox pathways stay open.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can I exercise during this phase?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes — but choose restorative workouts: yoga, walking, Pilates, or strength training with breath awareness. Avoid overtraining or fasting workouts in the first two weeks.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        When will I start feeling a difference?
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most clients notice changes by Week 2 — lighter digestion, clearer skin, and less bloating. By Week 4, energy and focus stabilize, sleep improves, and sugar cravings fade.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What happens after Phase 1?
+                    </div>
+                    <div class="faq-answer">
+                        <p>You'll move into Phase 2 — Rebuild, where we reintroduce more complex carbs, fermented foods, and variety. This helps you find your unique "gut balance point" — the foods your body thrives on.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Email Signup -->
+    <section id="subscribe" class="email-signup">
+        <div class="container">
+            <h2 class="section-title">Join My Community</h2>
+            <p class="section-subtitle">Get weekly gut health tips, meal ideas, and science-backed nutrition insights delivered to your inbox.</p>
+            
+            <div class="signup-form">
+                <form action="#" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <button type="submit" class="cta-button" style="width: 100%;">Subscribe Now</button>
+                </form>
+                <p style="margin-top: 25px; font-size: 0.95rem; color: rgba(255,255,255,0.8);">You'll receive a welcome email and weekly tips to transform your gut health.</p>
+            </div>
+            
+            <p style="margin-top: 35px;">
+                <a href="https://open.substack.com/pub/mindandnutrition" target="_blank" style="text-decoration: none; font-weight: 600;">Read My Latest Articles →</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Melanie D'Souza | Clinical Dietitian</p>
+            <p style="margin-top: 12px;">Dubai & India | <a href="/cdn-cgi/l/email-protection#81ece8efe5e0efe5eff4f5f3f5e8eeefb0c1e6ece0e8edafe2eeec"><span class="__cf_email__" data-cfemail="f19c989f95909f959f84858385989e9fc0b1969c90989ddf929e9c">[email&#160;protected]</span></a></p>
+            
+            <div class="social-links">
+                <a href="https://instagram.com/mindandnutrition" target="_blank" title="Follow on Instagram">📷 Instagram</a>
+                <a href="https://open.substack.com/pub/mindandnutrition" target="_blank" title="Read my blog">✍️ Blog</a>
+            </div>
+            
+            <p style="margin-top: 25px; font-size: 0.9rem; opacity: 0.7;">
+                <a href="#">Privacy Policy</a> | 
+                <a href="#">Terms of Service</a>
+            </p>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission placeholder (integrate with your email service)
+        const forms = document.querySelectorAll('form');
+        forms.forEach(form => {
+            form.addEventListener('submit', function(e) {
+                          e.preventDefault();
+                alert('Thank you! Please integrate this form with Mailchimp, ConvertKit, or your email service.');
+                // Add your email service integration here
+            });
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for scroll reveal (optional enhancement)
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add stagger delay to list items
+        document.querySelectorAll('.checklist-item').forEach((item, index) => {
+            item.style.animationDelay = `${index * 0.1}s`;
+        });
+
+        // Add parallax effect to hero section (subtle)
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero && scrolled < window.innerHeight) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+                hero.style.opacity = 1 - (scrolled / window.innerHeight) * 0.3;
+            }
+        });
+
+        // Smooth counter animation for credentials (optional)
+        const animateValue = (element, start, end, duration) => {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                element.textContent = Mat
