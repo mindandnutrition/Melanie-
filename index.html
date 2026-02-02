@@ -1,10 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO Meta Tags -->
+    <!-- Prevent browser from restoring scroll position -->
+    <script>
+        // Disable automatic scroll restoration
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        // Force immediate scroll to top
+        window.scrollTo(0, 0);
+    </script>
+    
+    <!-- SEO Meta Tags --> 
     <title>Melanie D'Souza | Clinical Dietitian Dubai & India | PCOS, Gut Health & Hormone Specialist</title>
     <meta name="description" content="Clinical Dietitian with 10 years hospital experience specializing in gut health, PCOS, thyroid, and hormonal imbalances. GUT CODE program in Dubai & India. Book free discovery call.">
     <meta name="keywords" content="clinical dietitian Dubai, nutritionist India, PCOS treatment Dubai, gut health specialist, thyroid dietitian, hormonal imbalance nutrition, IBS treatment, bloating solutions, Dubai nutritionist, India dietitian">
@@ -221,7 +229,13 @@
         /* Smooth scroll behavior */
         html {
             scroll-behavior: smooth;
-        }
+        overflow-anchor: none; /* Prevent browser auto-scroll */
+}
+
+/* Disable smooth scroll on initial page load to prevent jumping */
+html.no-smooth-scroll {
+    scroll-behavior: auto !important;
+}
 
         /* Profile picture in header */
         .header-profile {
@@ -1495,10 +1509,43 @@
             </p>
         </div>
     </footer>
-
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+<script>
+    // FORCE PAGE TO START AT TOP ON LOAD
+    // This prevents the page from jumping to sections
+    (function() {
+        // Add class to disable smooth scrolling on initial load
+        document.documentElement.classList.add('no-smooth-scroll');
+        
+        // Remove hash from URL
+        if (window.location.hash) {
+            if (window.history && window.history.replaceState) {
+                window.history.replaceState(null, null, window.location.pathname);
+            } else {
+                window.location.hash = '';
+            }
+        }
+        
+        // Force scroll to top immediately
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+        
+        // Re-enable smooth scrolling after a short delay
+        setTimeout(function() {
+            document.documentElement.classList.remove('no-smooth-scroll');
+        }, 100);
+    })();
+    
+    // Also on DOM ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+            window.scrollTo(0, 0);
+            document.documentElement.scrollTop = 0;
+            document.body.scrollTop = 0;
+        });
+    } else {
+        window.scrollTo(0, 0);
+    }
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
