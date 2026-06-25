@@ -986,21 +986,21 @@
 
         /* ── GLITTER SPARKLE ── */
         function spawnGlitter(x, y) {
-            var colors = ['#fc83ac','#e4e6a3','#ffffff','#ffd700','#ff9de2','#b8f0a0','#ffe066','#c9b8ff'];
-            var shapes = ['★','✦','✧','◆','•','✿','❋','⬡'];
-            var count  = 28;
+            var colors = ['#fc83ac','#e4e6a3','#ffffff','#ffd700','#ff9de2','#b8f0a0','#ffe066','#c9b8ff','#ff6eb4','#fff176'];
+            var shapes = ['★','✦','✧','◆','•','✿','❋','⬡','❀','✱','⭐','💫'];
+            var count  = 36;
             for (var i = 0; i < count; i++) {
                 (function(i) {
                     var el = document.createElement('span');
                     el.textContent = shapes[Math.floor(Math.random() * shapes.length)];
-                    var size   = 10 + Math.random() * 18;
-                    var angle  = (360 / count) * i + (Math.random() * 30 - 15);
-                    var dist   = 60 + Math.random() * 110;
+                    var size   = 10 + Math.random() * 20;
+                    var angle  = (360 / count) * i + (Math.random() * 25 - 12);
+                    var dist   = 70 + Math.random() * 130;
                     var rad    = angle * Math.PI / 180;
                     var dx     = Math.cos(rad) * dist;
                     var dy     = Math.sin(rad) * dist;
-                    var dur    = 0.6 + Math.random() * 0.7;
-                    var delay  = Math.random() * 0.15;
+                    var dur    = 0.7 + Math.random() * 0.8;
+                    var delay  = Math.random() * 0.18;
                     el.style.cssText = [
                         'position:fixed',
                         'left:' + x + 'px',
@@ -1008,29 +1008,34 @@
                         'font-size:' + size + 'px',
                         'color:' + colors[Math.floor(Math.random() * colors.length)],
                         'pointer-events:none',
-                        'z-index:9999',
+                        'z-index:99999',
                         'user-select:none',
-                        'transform:translate(-50%,-50%)',
-                        'transition:transform ' + dur + 's cubic-bezier(0.2,0,0.8,1) ' + delay + 's, opacity ' + dur + 's ease ' + delay + 's',
+                        'transform:translate(-50%,-50%) scale(1)',
+                        'transition:transform ' + dur + 's cubic-bezier(0.1,0.8,0.3,1) ' + delay + 's, opacity ' + (dur * 0.8) + 's ease ' + (delay + dur * 0.3) + 's',
                         'opacity:1',
-                        'text-shadow:0 0 6px currentColor'
+                        'will-change:transform,opacity',
+                        'text-shadow:0 0 8px currentColor, 0 0 16px currentColor'
                     ].join(';');
                     document.body.appendChild(el);
                     requestAnimationFrame(function() {
                         requestAnimationFrame(function() {
-                            el.style.transform = 'translate(calc(-50% + ' + dx + 'px), calc(-50% + ' + dy + 'px)) scale(0.2) rotate(' + (Math.random()*360) + 'deg)';
+                            el.style.transform = 'translate(calc(-50% + ' + dx + 'px), calc(-50% + ' + dy + 'px)) scale(0.15) rotate(' + (Math.random()*540 - 270) + 'deg)';
                             el.style.opacity   = '0';
                         });
                     });
-                    setTimeout(function() { el.remove(); }, (dur + delay + 0.1) * 1000);
+                    setTimeout(function() { if (el.parentNode) el.remove(); }, (dur + delay + 0.2) * 1000);
                 })(i);
             }
         }
 
+        /* Glitter on section headings — no navigation needed, fires instantly */
         document.querySelectorAll('.section-title, .checklist-title').forEach(function(el) {
-            el.style.cursor = 'default';
+            el.style.cursor = 'pointer';
             el.addEventListener('click', function(e) {
-                spawnGlitter(e.clientX, e.clientY);
+                var rect = el.getBoundingClientRect();
+                var cx = rect.left + rect.width / 2;
+                var cy = rect.top + rect.height / 2;
+                spawnGlitter(cx, cy);
             });
         });
 
@@ -1040,20 +1045,26 @@
             if (text.indexOf('discovery') !== -1 || text.indexOf('book') !== -1) {
                 btn.addEventListener('click', function(e) {
                     var href = btn.getAttribute('href');
-                    /* Only intercept internal anchor links */
                     if (href && href.startsWith('#')) {
                         e.preventDefault();
                         spawnGlitter(e.clientX, e.clientY);
                         setTimeout(function() {
                             var target = document.querySelector(href);
-                            if (target) {
-                                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                            }
+                            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                         }, 420);
                     } else {
-                        /* External links: show glitter without blocking navigation */
                         spawnGlitter(e.clientX, e.clientY);
                     }
+                });
+            }
+        });
+
+        /* Glitter on Subscribe button */
+        document.querySelectorAll('.cta-button, button.cta-button').forEach(function(btn) {
+            var text = btn.textContent.trim().toLowerCase();
+            if (text.indexOf('subscribe') !== -1) {
+                btn.addEventListener('click', function(e) {
+                    spawnGlitter(e.clientX, e.clientY);
                 });
             }
         });
