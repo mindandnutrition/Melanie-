@@ -1034,12 +1034,26 @@
             });
         });
 
-        /* Glitter on all Book Discovery Call buttons */
+        /* Glitter on all Book Discovery Call buttons — delay nav so sparkles are visible */
         document.querySelectorAll('.cta-button').forEach(function(btn) {
             var text = btn.textContent.trim().toLowerCase();
             if (text.indexOf('discovery') !== -1 || text.indexOf('book') !== -1) {
                 btn.addEventListener('click', function(e) {
-                    spawnGlitter(e.clientX, e.clientY);
+                    var href = btn.getAttribute('href');
+                    /* Only intercept internal anchor links */
+                    if (href && href.startsWith('#')) {
+                        e.preventDefault();
+                        spawnGlitter(e.clientX, e.clientY);
+                        setTimeout(function() {
+                            var target = document.querySelector(href);
+                            if (target) {
+                                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                        }, 420);
+                    } else {
+                        /* External links: show glitter without blocking navigation */
+                        spawnGlitter(e.clientX, e.clientY);
+                    }
                 });
             }
         });
