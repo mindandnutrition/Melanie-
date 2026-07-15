@@ -42,8 +42,8 @@
     <style>
         /* ═══════════════════════════════
            COLOUR PALETTE
-           --ivory      warm ivory primary bg   #FFFFFF
-           --ivory-alt  slightly deeper ivory   #dde8a
+           --ivory      warm ivory primary bg   #FCF4E3
+           --ivory-alt  slightly deeper ivory   #F5EAD0
            --white      pure white (cards)      #FFFFFF
            --pink       flamingo pink CTA       #FF84B5
            --pink-dark  deeper pink hover       #e8608e
@@ -54,14 +54,14 @@
         ═══════════════════════════════ */
         :root {
             --ivory:      #FCF4E3;
-            --ivory-alt:   #FFFFFF;
+            --ivory-alt:  #F5EAD0;
             --white:      #FFFFFF;
             --pink:       #FF84B5;
             --pink-dark:  #e8608e;
             --sage:       #99AA4A;
             --sage-light: #dde8a0;
             --charcoal:   #2e2e2e;
-            --mid:        #555555;
+            --mid:        #3a3a3a;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -174,7 +174,7 @@
             animation: slideInRight 0.8s ease-out 0.2s both;
         }
         .nav-links a {
-            text-decoration: none; color: var(--mid); font-size: 0.95rem;
+            text-decoration: none; color: #444444; font-size: 0.95rem;
             font-weight: 500; transition: color 0.3s; letter-spacing: 0.3px; position: relative;
         }
         .nav-links a::after {
@@ -206,12 +206,12 @@
             animation: fadeInUp 0.8s ease-out 0.2s both;
         }
         .hero .subtitle {
-            font-size: 1.3rem; color: var(--mid); margin-bottom: 25px;
+            font-size: 1.3rem; color: #444444; margin-bottom: 25px;
             font-weight: 500; font-style: italic; font-family: 'Playfair Display', serif;
             letter-spacing: 0.5px; animation: fadeInUp 0.8s ease-out 0.4s both;
         }
         .hero .tagline {
-            font-size: 1.15rem; color: var(--mid); max-width: 680px;
+            font-size: 1.15rem; color: #3a3a3a; max-width: 680px;
             margin: 0 auto 35px; line-height: 1.8;
             animation: fadeInUp 0.8s ease-out 0.6s both;
         }
@@ -251,7 +251,7 @@
 
         .cta-button.secondary {
             background: transparent;
-            color: var(--mid);
+            color: #444444;
             border: 2px solid rgba(255,132,181,0.6);
             animation: none;
         }
@@ -278,9 +278,9 @@
         .section-title:hover::after { width: 160px; }
 
         .section-subtitle {
-            text-align: center; font-size: 1.15rem; color: rgba(232,217,192,0.75);
+            text-align: center; font-size: 1.15rem; color: #3a3a3a;
             margin-bottom: 60px; max-width: 680px; margin-left: auto; margin-right: auto;
-            font-weight: 400; line-height: 1.7;
+            font-weight: 400; line-height: 1.7; color: #3a3a3a;
         }
 
         /* ── ABOUT ── */
@@ -299,7 +299,7 @@
             color: var(--charcoal); font-size: 2.2rem; margin-bottom: 25px;
             font-family: 'Playfair Display', serif; font-weight: 700; letter-spacing: -0.5px;
         }
-        .about-text p { margin-bottom: 20px; line-height: 1.8; color: var(--mid); font-size: 1.05rem; }
+        .about-text p { margin-bottom: 20px; line-height: 1.8; color: #444444; font-size: 1.05rem; }
         .highlight-box {
             background: linear-gradient(135deg, rgba(255,132,181,0.07) 0%, rgba(221,232,160,0.2) 100%);
             padding: 35px;
@@ -331,7 +331,7 @@
             font-style: italic; font-family: 'Playfair Display', serif; font-weight: 700;
         }
         .checklist-intro {
-            text-align: center; font-size: 1.2rem; color: var(--mid);
+            text-align: center; font-size: 1.2rem; color: #444444;
             margin-bottom: 45px; font-weight: 500;
         }
         .checklist-items { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 40px 0; }
@@ -339,7 +339,7 @@
             background-color: #f5f9e8; padding: 20px 25px; border-radius: 8px;
             display: flex; align-items: center; cursor: pointer;
             border: 1.5px solid rgba(153,170,74,0.2);
-            font-size: 1.05rem; font-weight: 500; color: var(--mid);
+            font-size: 1.05rem; font-weight: 500; color: #444444;
             transition: border-color 0.3s, background-color 0.3s, transform 0.25s, box-shadow 0.3s;
         }
         .checklist-item:hover {
@@ -366,7 +366,7 @@
             font-size: 1.8rem; margin-bottom: 18px; font-family: 'Playfair Display', serif;
             font-weight: 600; line-height: 1.4; color: var(--charcoal);
         }
-        .checklist-cta p { font-size: 1.1rem; margin-bottom: 30px; line-height: 1.8; color: var(--mid); }
+        .checklist-cta p { font-size: 1.1rem; margin-bottom: 30px; line-height: 1.8; color: #444444; }
 
         /* ── GUT CODE ── */
         .gut-code { background-color: var(--ivory); }
@@ -398,7 +398,7 @@
         .program-card ul { list-style: none; margin: 30px 0; }
         .program-card li {
             padding: 12px 0 12px 30px; position: relative;
-            color: var(--mid); line-height: 1.6;
+            color: #3a3a3a; line-height: 1.6;
             border-bottom: 1px solid rgba(0,0,0,0.05);
             transition: color 0.2s, padding-left 0.25s;
         }
@@ -433,7 +433,7 @@
             color: var(--charcoal); font-size: 2rem; margin-bottom: 20px;
             font-family: 'Playfair Display', serif; font-weight: 700;
         }
-        .service-card p { line-height: 1.8; color: var(--mid); margin-bottom: 15px; }
+        .service-card p { line-height: 1.8; color: #444444; margin-bottom: 15px; }
 
         .not-for-you {
             background: linear-gradient(135deg, rgba(221,232,160,0.3) 0%, rgba(255,132,181,0.08) 100%);
@@ -446,7 +446,7 @@
             color: var(--pink); font-size: 2.2rem; margin-bottom: 20px;
             font-family: 'Playfair Display', serif; font-weight: 700;
         }
-        .not-for-you p { color: var(--mid); font-size: 1.1rem; margin-bottom: 10px; }
+        .not-for-you p { color: #444444; font-size: 1.1rem; margin-bottom: 10px; }
 
         .calendly-section {
             max-width: 800px; margin: 50px auto;
@@ -486,7 +486,7 @@
             box-shadow: 0 16px 40px rgba(153,170,74,0.15);
             border-color: var(--pink);
         }
-        .testimonial-card p { font-style: italic; margin-bottom: 20px; line-height: 1.8; color: var(--mid); }
+        .testimonial-card p { font-style: italic; margin-bottom: 20px; line-height: 1.8; color: #444444; }
         .testimonial-author { color: var(--pink); font-weight: 600; font-size: 1.05rem; }
 
         /* ── FAQ ── */
@@ -539,9 +539,9 @@
             animation: faqOpen 0.35s ease both;
         }
         .faq-divider { height: 1px; background: rgba(255,132,181,0.15); margin-bottom: 20px; }
-        .faq-answer p { line-height: 1.8; color: var(--mid); margin-bottom: 12px; }
+        .faq-answer p { line-height: 1.8; color: #444444; margin-bottom: 12px; }
         .faq-answer ul { margin: 12px 0; padding-left: 25px; }
-        .faq-answer li { margin: 8px 0; color: var(--mid); }
+        .faq-answer li { margin: 8px 0; color: #444444; }
         .faq-answer strong { color: var(--pink); font-weight: 600; }
 
         /* ── EMAIL SIGNUP ── */
@@ -581,7 +581,7 @@
 
         /* ── FOOTER ── */
         footer {
-            background-color: var(--ivory); color: var(--mid);
+            background-color: var(--ivory); color: #444444;
             padding: 50px 0; text-align: center;
             border-top: 1px solid rgba(153,170,74,0.2);
         }
@@ -716,7 +716,7 @@
                     <div class="price"><span class="original-price">AED 949</span><span>AED 499</span></div>
                     <p style="font-size:0.95rem;color:var(--pink);font-weight:600;">Limited Time Launch Offer</p>
                     <a href="https://wa.me/918618204830" class="cta-button" target="_blank">Start Phase 1 Now</a>
-                    <p style="text-align:center;font-size:0.9rem;margin-top:12px;color:rgba(232,217,192,0.5);">Digital, self-paced program</p>
+                    <p style="text-align:center;font-size:0.9rem;margin-top:12px;color:#555555;font-weight:500;">Digital, self-paced program</p>
                 </div>
                 <div class="program-card reveal from-right">
                     <span class="phase-label">Phase 2</span>
@@ -731,7 +731,7 @@
                         <li>Sustainable long-term results</li>
                     </ul>
                     <div class="price">Contact for Pricing</div>
-                    <p style="font-size:0.95rem;color:rgba(232,217,192,0.6);">Available after completing Phase 1</p>
+                    <p style="font-size:0.95rem;color:#555555;font-weight:500;">Available after completing Phase 1</p>
                     <p style="font-size:1rem;margin-top:18px;color:var(--charcoal);font-weight:600;">Start with a FREE 15-minute discovery call</p>
                     <a href="#services" class="cta-button secondary">Book Discovery Call</a>
                 </div>
@@ -764,7 +764,7 @@
             </div>
             <div class="calendly-section reveal">
                 <h3>Book Your Free Discovery Call</h3>
-                <p style="text-align:center;margin-bottom:35px;color:var(--mid);">Choose a time that works for you:</p>
+                <p style="text-align:center;margin-bottom:35px;color:#444444;">Choose a time that works for you:</p>
                 <div class="calendly-inline-widget" data-url="https://calendly.com/mindandnutrition1/30min?month=2026-03" style="min-width:320px;height:630px;"></div>
                 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
                 <p style="text-align:center;margin-top:25px;font-size:0.9rem;color:rgba(232,217,192,0.6);">Book your free 15-minute call to discuss your health goals.</p>
@@ -895,7 +895,7 @@
                     <input type="email" name="email" placeholder="Your Email" required>
                     <button type="submit" class="cta-button" style="width:100%;">Subscribe Now</button>
                 </form>
-                <p style="margin-top:25px;font-size:0.95rem;color:var(--mid);">You'll receive a welcome email and weekly tips to transform your gut health.</p>
+                <p style="margin-top:25px;font-size:0.95rem;color:#444444;">You'll receive a welcome email and weekly tips to transform your gut health.</p>
             </div>
             <p style="margin-top:35px;" class="reveal">
                 <a href="https://open.substack.com/pub/mindandnutrition" target="_blank" style="text-decoration:none;font-weight:600;">Read My Latest Articles →</a>
